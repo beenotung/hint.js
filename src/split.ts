@@ -1,11 +1,11 @@
 export function isWord(c: string): boolean {
   return ('a' <= c && c <= 'z')
-    // || ('A' <= c && c <= 'Z"')
+  // || ('A' <= c && c <= 'Z"')
 }
 
 export function split_word(s: string, f: (word: string) => string = w => w): string[] {
   let res: string[] = [];
-  let n = s.length - 1;
+  let n = s.length;
   let acc = '';
   for (let i = 0; i < n; i++) {
     let c = s[i];
