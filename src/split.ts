@@ -19,6 +19,6 @@ export function split_word(s: string, f: (word: string) => string = w => w): str
       res.push(c);
     }
   }
-  res.push(acc);
+  res.push(f(acc));
   return res;
 }
