@@ -8,8 +8,11 @@
     "hint": "dist/cli.js"
   },
   "scripts": {
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
     "build": "tsc",
-    "test": "ts-node test/mess-test.ts"
+    "test": "ts-node test/mess-test.ts",
+    "prepublishOnly": "npm run test && npm run build"
   },
   "keywords": [],
   "author": "Beeno Tung",
